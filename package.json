@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodmon app",
+    "start": "npx nodemon app",
     "dev": "npx node app",
     "init:db": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
     "init:db:prod:migrate": "npx sequelize db:migrate --url=postgresql://postgres:[YOUR-PASSWORD]@db.mfwfgiraedajzjqwouwv.supabase.co:5432/postgres --env=production",
