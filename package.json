@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx node app",
+    "dev": "npx nodemon app",
+    "init:db": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
+    "init:db:prod:migrate": "npx sequelize db:migrate --url=postgresql://postgres:[YOUR-PASSWORD]@db.mfwfgiraedajzjqwouwv.supabase.co:5432/postgres --env=production",
+    "init:db:prod:seed": "npx sequelize db:seed:all --url=postgresql://postgres:[YOUR-PASSWORD]@db.mfwfgiraedajzjqwouwv.supabase.co:5432/postgres --env=production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.10.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.30.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "sequelize-cli": "^6.6.0"
+  }
+}
